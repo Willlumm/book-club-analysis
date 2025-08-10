@@ -6,6 +6,8 @@ from typing import Any
 
 import yaml
 
+from settings import RAW_DIR
+
 # Need to set Chromium version before importing requests-html. Default version used by
 # Pyppeteer is no longer available.
 os.environ["PYPPETEER_CHROMIUM_REVISION"] = "1465706"
@@ -15,9 +17,6 @@ from requests_html import HTMLSession
 READ_BOOKS_URL = "https://www.goodreads.com/review/list/{user_id}?shelf=read"
 
 USERS_FILE = Path("goodreads_users.yml")
-
-DATA_ROOT = Path("data")
-RAW_DIR = DATA_ROOT / "raw"
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
