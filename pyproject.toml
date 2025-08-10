@@ -4,8 +4,8 @@ version = "0.1.0"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "dotenv>=0.9.9",
     "lxml[html-clean]>=6.0.0",
+    "pyyaml>=6.0.2",
     "requests-html>=0.10.0",
 ]
 
@@ -17,7 +17,10 @@ dev = [
 
 [tool.ruff.lint]
 select = ["ALL"] 
-ignore = ["COM812"]
+ignore = [
+    "COM812", # Missing trailing comma - handled by formatter.
+    "G004" # Logging f-string
+]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"

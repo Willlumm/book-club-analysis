@@ -1,4 +1,6 @@
 __pycache__/
 .ruff_cache/
 .venv/
+data/
 .env
+goodreads_users.yml
